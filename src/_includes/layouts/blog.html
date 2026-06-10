@@ -1,0 +1,15 @@
+
+{% extends "./base.html" %}
+
+{% block css %}
+<link href="../../css/style.css" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+
+<h1>{{ title }}</h1>
+<article>
+  {{ content | safe }}
+</article>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>nicoweb — {{ title }}</title>
+    {% block css %}
+      <link href="css/style.css" rel="stylesheet" />
+    {% endblock %}
+  </head>
+  <body>
+    <div class="body-container">
+      {% include "layouts/header.html" %}
+      <main>
+        {% block content %}
+        <article>
+          <!-- <h1>{{ title }}</h1> -->
+          {{ content | safe }}
+        </article>
+        {% endblock %}
+      </main>
+      {% include "layouts/footer.html" %}
+    </div>
+  </body>
+</html>

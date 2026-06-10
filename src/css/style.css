@@ -1,0 +1,123 @@
+:root {
+  --bgcolor: #f7fae0;
+  --main-color: #232323;
+  --fontsize: 12pt;
+}
+
+::selection {
+  color: var(--bgcolor);
+  background-color: var(--main-color);
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: var(--fontsize);
+  background-color: var(--bgcolor);
+}
+
+.body-container {
+  width: min(70ch, 100% - 10ch);
+  margin-inline: auto;
+  margin-top: 4ch;
+  padding-inline: 3rem;
+  box-sizing: border-box;
+  text-align: justify;
+  color: var(--main-color);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  place-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#header-logo {
+  flex: 3;
+  font-size: calc(1.6 * var(--fontsize));
+}
+
+header a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* #header-side { */
+/*   flex: 2; */
+/*   font-size: smaller; */
+/*   border-left: 2px solid; */
+/*   padding-left: 2rem; */
+/*   text-align: end; */
+/* } */
+
+/* scrapped for now; might bring back if i re-add header links */
+
+/* nav { */
+/*   display: flex; */
+/*   flex-wrap: wrap; */
+/*   border-top: 2px solid; */
+/* } */
+
+/* for now im thinking about implementing breadcrumbs, somehow */
+/* nav a { */
+/*   flex: 1; */
+/*   text-align: center; */
+/*   /* font-family: "Iosevka Web"; */
+/*   font-family: 'Courier New', Courier, monospace; */
+/*   font-weight: normal; */
+/*   padding-block: 0.5rem; */
+/*   padding-inline: 1rem; */
+/* } */
+
+main {
+  border-top: 2px solid;
+}
+
+/* what the hell was this supposed to be for?? */
+/* .info { */
+/*   text-indent: none; */
+/*   font-size: smaller; */
+/*   text-decoration: underline; */
+/*   margin-top: -1.5em; */
+/* } */
+
+a {
+  font-weight: normal;
+  color: var(--main-color);
+  text-decoration: underline;
+  transition-property: color, background, text-decoration-color, font-weight;
+  transition-duration: 0.15s;
+  &:hover {
+    color: var(--bgcolor);
+    background: var(--main-color);
+    text-decoration-color: var(--main-color);
+    font-weight: bold;
+  }
+}
+
+code {
+  background-color: #353535;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+hr {
+  background-color: var(--main-color);
+  border: none;
+  height: 1px;
+}
+
+footer {
+  padding-top: 2ch;
+  font-size: calc(0.8 * var(--fontsize));
+  & p {
+    line-height: 0.3;
+  }
+}
