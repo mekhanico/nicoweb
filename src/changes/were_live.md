@@ -1,0 +1,16 @@
+---
+title: WE'RE LIVE ON NEKOWEB BABY
+date: 2026-06-16
+---
+
+LETS GOOOOOOOOOO
+
+its admittedly quite a small step, but it's better than nothing, i suppose?
+
+i have also properly implemented the 'recent blog posts' and 'recent changes' sections to 1.) display the date of posting, and 2.) arrange the posts in reverse chronological order. fun!
+
+i used <code>\<small\></code> tags for now, since they were quick to do and look good enough for now, though i do plan to add some styling (i.e. right align the date and maybe give it a faded grey shade)
+
+additionally, now that the site is up and running, maybe i can add the theme switcher i talked about in the [previous](/changes/let_there_be_site.md) changelog. custom fonts are also a must, of course
+
+but for now, i celebrate my first official mark on this community known as Nekoweb
