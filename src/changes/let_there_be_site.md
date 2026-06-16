@@ -1,6 +1,5 @@
 ---
 title: let there be site (and future plans)
-date: 2026-06-11
 ---
 
 (i will come to regret this page title in like three months, i'm sure of it)

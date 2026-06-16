@@ -1,8 +1,0 @@
-<ul>
-    {% for post in collections.blog | reverse %}
-    <!--TODO: sort in reverse chrono order, add dates-->
-
-        \>> [{{ post.data.title }}]({{ post.url }}) - {{ post.date.toLocaleDateString('en-US', { dateStyle: 'medium' }) }}
-
-    {% endfor %}
-</ul>
