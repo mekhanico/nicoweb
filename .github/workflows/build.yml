@@ -26,5 +26,6 @@ jobs:
             nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
             nekoweb-domain: 'mekhanico.nekoweb.org'
             nekoweb-username: 'mekhanico'
+            directory: 'public'
 
 
