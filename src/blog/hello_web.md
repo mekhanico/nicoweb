@@ -1,5 +1,6 @@
 ---
 title: hello web
+date: 2026-06-11
 ---
 
 this entry (hopefully) marks my very first foray into the indie web.

@@ -15,10 +15,9 @@ if the state of this site is any indication... that's something i'm still workin
 
 ## recent posts
 
-{% for post in collections.blog %}
-<!--TODO: sort in reverse chrono order, add dates-->
+{% for post in collections.blog | reverse %}
 
-\>> [{{ post.data.title }}]({{ post.url }})
+\>> [{{ post.data.title }}]({{ post.url }}) <small>({{ post.date.toLocaleDateString('en-US', { dateStyle: 'short' }) }})</small>
 
 {% endfor %}
 
@@ -26,8 +25,8 @@ if the state of this site is any indication... that's something i'm still workin
 
 ## changelog
 
-{% for post in collections.changes %}
+{% for post in collections.changes | reverse %}
 
-\>> [{{ post.data.title }}]({{ post.url }})
+\>> [{{ post.data.title }}]({{ post.url }}) <small>({{ post.date.toLocaleDateString('en-US', { dateStyle: 'short' }) }})</small>
 
 {% endfor %}
