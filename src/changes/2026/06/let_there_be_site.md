@@ -7,7 +7,7 @@ date: 2026-06-11
 
 self-deprecation aside, i think i've a good enough looking site that i can finally show it off publicly! though, due to recent circumstances, i might not be able to upload this onto nekoweb until a week from now
 
-as mentioned in my [first blog entry](/blog/hello_web), i should really figure out a naming scheme for these. there are probably ways to do this programmatically using 11ty; will explore those in the future
+as mentioned in my [first blog entry](/blog/2026/06/hello_web), i should really figure out a naming scheme for these. there are probably ways to do this programmatically using 11ty; will explore those in the future
 
 at present, the site is very minimal and text-based (i haven't even incorporated media styling into my css); future plans might include a 'test page' similar to those you see on CSS framework demos, just so i have an idea of what i want things to look like across the site
 

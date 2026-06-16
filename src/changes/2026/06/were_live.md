@@ -11,6 +11,6 @@ i have also properly implemented the 'recent blog posts' and 'recent changes' se
 
 i used <code>\<small\></code> tags for now, since they were quick to do and look good enough for now, though i do plan to add some styling (i.e. right align the date and maybe give it a faded grey shade)
 
-additionally, now that the site is up and running, maybe i can add the theme switcher i talked about in the [previous](/changes/let_there_be_site.md) changelog. custom fonts are also a must, of course
+additionally, now that the site is up and running, maybe i can add the theme switcher i talked about in the [previous](/changes/2026/06/let_there_be_site.md) changelog. custom fonts are also a must, of course
 
 but for now, i celebrate my first official mark on this community known as Nekoweb
