@@ -1,9 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>nicoweb — home page</title>
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme");
+        if (theme) {
+          document.documentElement.dataset.theme = theme;
+        }
+      })();
+    </script>
     
       <link href="css/style.css" rel="stylesheet" />
     
@@ -12,16 +20,19 @@
     <div class="body-container">
       <header>
   <h1 id="header-logo"><a href="/">nicoweb</a></h1>
-  <!-- <div id="header-side"> -->
-  <!--   <p>silly website for silly things</p> -->
-  <!-- </div> -->
+  <div id="header-side">
+    <select id="theme-select">
+      <option value="" disabled>light ---</option>
+      <option name="theme" value="light" id="light">base-light</option>
+      <option name="theme" value="blue" id="blue">blue</option>
+      <option name="theme" value="dayfox" id="dayfox">dayfox</option>
+      <option value="" disabled>dark ---</option>
+      <option name="theme" value="dark" id="dark">base-dark</option>
+      <option name="theme" value="gruv" id="gruv">gruvbox</option>
+      <option name="theme" value="nightfox" id="nightfox">nightfox</option>
+    </select>
+  </div>
 </header>
-<!-- <nav> -->
-<!--   <a href="">ABOUT</a> -->
-<!--   <a href="">NOW</a> -->
-<!--   <a href="">CODE</a> -->
-<!--   <a href="">WRITING</a> -->
-<!-- </nav> -->
 
       <main>
         
@@ -33,9 +44,10 @@
 <p>if the state of this site is any indication... that's something i'm still working on.</p>
 <hr>
 <h2>recent posts</h2>
-<p>&gt;&gt; <a href="/blog/2026/06/hello_web/">hello web</a> <small>(6/11/26)</small></p>
+<p>&gt;&gt; <a href="/blog/2026/06/hello_web/">hello web!</a> <small>(6/11/26)</small></p>
 <hr>
-<h2>changelog</h2>
+<h2>recent changes</h2>
+<p>&gt;&gt; <a href="/changes/2026/06/theme_switcher(and_fonts)/">we have a theme switcher!! (and fonts!)</a> <small>(6/18/26)</small></p>
 <p>&gt;&gt; <a href="/changes/2026/06/were_live/">WE'RE LIVE ON NEKOWEB BABY</a> <small>(6/16/26)</small></p>
 <p>&gt;&gt; <a href="/changes/2026/06/let_there_be_site/">let there be site (and future plans)</a> <small>(6/11/26)</small></p>
 
@@ -52,4 +64,7 @@
 
     </div>
   </body>
+  
+    <script src="js/script.js"></script>
+  
 </html>

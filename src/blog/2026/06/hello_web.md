@@ -1,5 +1,5 @@
 ---
-title: hello web
+title: hello web!
 date: 2026-06-11
 ---
 

@@ -23,7 +23,7 @@ if the state of this site is any indication... that's something i'm still workin
 
 - - -
 
-## changelog
+## recent changes
 
 {% for post in collections.changes | reverse %}
 

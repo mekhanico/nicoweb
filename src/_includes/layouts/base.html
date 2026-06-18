@@ -1,9 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>nicoweb — {{ title }}</title>
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme");
+        if (theme) {
+          document.documentElement.dataset.theme = theme;
+        }
+      })();
+    </script>
     {% block css %}
       <link href="css/style.css" rel="stylesheet" />
     {% endblock %}
@@ -22,4 +30,7 @@
       {% include "layouts/footer.html" %}
     </div>
   </body>
+  {% block js %}
+    <script src="js/script.js"></script>
+  {% endblock %}
 </html>

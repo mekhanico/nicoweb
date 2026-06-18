@@ -1,8 +1,69 @@
-:root {
-  --bgcolor: #f7fae0;
-  --main-color: #232323;
-  --fontsize: 12pt;
+@font-face {
+  font-family: "Times New Roman MT Condensed";
+  src: url('../assets/fonts/times-new-roman-condensed.woff') format('woff'),
+    url("https://db.onlinewebfonts.com/t/c4540c0dbd7c6a2eae38e9ade0bb423d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/c4540c0dbd7c6a2eae38e9ade0bb423d.woff")format("woff"),
 }
+
+/* dejavu-mono-latin-400-normal */
+@font-face {
+  font-family: 'DejaVu Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('../assets/fonts/dejavu-mono-latin-400-normal.woff') format('woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/dejavu-mono@latest/latin-400-normal.woff2) format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/dejavu-mono@latest/latin-400-normal.woff) format('woff');
+}
+
+/* dejavu-mono-latin-700-normal */
+@font-face {
+  font-family: 'DejaVu Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('../assets/fonts/dejavu-mono-latin-700-normal.woff')format('woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/dejavu-mono@latest/latin-700-normal.woff2) format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/dejavu-mono@latest/latin-700-normal.woff) format('woff');
+}
+
+/* dejavu-mono-latin-400-italic */
+@font-face {
+  font-family: 'DejaVu Mono';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: url('../assets/fonts/dejavu-mono-latin-400-italic.woff')format('woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/dejavu-mono@latest/latin-400-italic.woff2) format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/dejavu-mono@latest/latin-400-italic.woff) format('woff');
+}
+
+/* dejavu-mono-latin-700-italic */
+@font-face {
+  font-family: 'DejaVu Mono';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src: url('../assets/fonts/dejavu-mono-latin-700-italic.woff'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/dejavu-mono@latest/latin-700-italic.woff2) format('woff2'),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/dejavu-mono@latest/latin-700-italic.woff) format('woff');
+}
+
+:root {
+  /* --fontsize: 1.8rem; */
+  --fontsize: 13pt;
+}
+
+/* html { font-size: 62.5%;} */
+
+/* WEBSITE THEMES */
+
+:root[data-theme="light"] { --bgcolor: #faf9f6; --main-color: #232323; }
+:root[data-theme="blue"]  { --bgcolor: #f7fafc; --main-color: #0035db; }
+:root[data-theme="dayfox"]{ --bgcolor: #f6f2ee; --main-color: #3d2b5a; }
+:root[data-theme="dark"]  { --bgcolor: #1a1a19; --main-color: #f2f4f8; }
+:root[data-theme="nightfox"] { --bgcolor: #192330; --main-color: #cdcecf; }
+:root[data-theme="gruv"]  { --bgcolor: #282828; --main-color: #ebdbb2; }
 
 ::selection {
   color: var(--bgcolor);
@@ -10,33 +71,39 @@
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'DejaVu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
   font-size: var(--fontsize);
   background-color: var(--bgcolor);
+  transition: background-color 0.4s ease;
 }
 
 .body-container {
-  width: min(70ch, 100% - 10ch);
+  width: min(64ch, 100%);
   margin-inline: auto;
   margin-top: 4ch;
   padding-inline: 3rem;
   box-sizing: border-box;
   text-align: justify;
   color: var(--main-color);
+  transition: color 0.4s ease;
 }
 
 header {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
-  place-content: center;
-  align-items: center;
-  font-family: 'Courier New', Courier, monospace;
+  /* place-content: center; */
+  /* align-items: center; */
 }
 
 #header-logo {
   flex: 3;
-  font-size: calc(1.6 * var(--fontsize));
+  font-size: calc(2 * var(--fontsize));
+}
+
+#header-side {
+  flex: 1;
+  align-content: center;
+  text-align: end;
 }
 
 header a {
@@ -44,8 +111,45 @@ header a {
   font-weight: bold;
 }
 
+select#theme-select {
+  /* appearance: base-select; */
+  border: none;
+  padding: 0.5rem;
+  font-family: 'DejaVu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+  font-size: calc(0.8*var(--fontsize));
+  background-color: var(--bgcolor);
+  color: var(--main-color);
+  transition: background-color 0.4s ease, color 0.4s ease, border 0.4s ease;
+}
+
 main {
   border-top: 2px solid;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Times New Roman MT Condensed", 'Times New Roman', Times, 'Liberation Serif', serif;
+  text-align: left;
+  line-height: 1;
+  margin-block: 2rem;
+}
+
+h1 {
+  font-size: calc(3 * var(--fontsize));
+}
+
+h2 {
+  font-size: calc(2.3 * var(--fontsize));
+}
+
+h3 {
+  font-size: calc(1.7 * var(--fontsize));
+  color: color-mix(in srgb, var(--bgcolor) 20%, var(--main-color) 80%);
 }
 
 a {
@@ -54,6 +158,7 @@ a {
   text-decoration: underline;
   transition-property: color, background, text-decoration-color, font-weight;
   transition-duration: 0.15s;
+
   &:hover {
     color: var(--bgcolor);
     background: var(--main-color);
@@ -70,7 +175,8 @@ code {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.618;
+  /* text-indent: 2ch; */
 }
 
 hr {
@@ -82,7 +188,8 @@ hr {
 footer {
   padding-top: 2ch;
   font-size: calc(0.8 * var(--fontsize));
+
   & p {
-    line-height: 0.3;
+    line-height: 1.1;
   }
 }
